@@ -23,7 +23,7 @@ the object on the screen.
 - [ ] Remove the error after closing the window
 - [ ] Smooth the input from the controller to straight lines
 - [ ] Allow keyboard input
-- [ ] Full Linux/Mac/Windows support
+- [x] Full Linux/Mac/Windows support
 - [ ] Erasing old movements without restarting program
 - [ ] Marking important actions on the field
 - [ ] Add icons to the field
