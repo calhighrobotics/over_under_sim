@@ -1,10 +1,9 @@
 name: Build and release App
 
-on:
+on:  
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ] # Customize the branch you want to trigger the workflow
+    tags:
+      - '*'
 
 jobs:
   build:
