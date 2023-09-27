@@ -33,11 +33,10 @@ jobs:
         run: |
           cp over_under_field.png dist
           mv dist over_under_sim
-          zip over_under_sim_${{ matrix.os }}.zip over_under_sim/
         working-directory: ${{ github.workspace }}
 
       - name: Upload to artifacts
         uses: actions/upload-artifact@v3
         with:
           name: over_under_sim_${{ matrix.os }}
-          path: over_under_sim_${{ matrix.os }}.zip
+          path: over_under_sim
