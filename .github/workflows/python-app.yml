@@ -1,0 +1,42 @@
+name: Build and Package App
+
+on:
+  push:
+    branches:
+      - main  # Customize the branch you want to trigger the workflow
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: [3.11]  # Customize the Python version
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: pip install . && pip install pyinstaller
+
+      - name: Build with PyInstaller
+        run: pyinstaller --onefile --noconsole main.py
+
+      - name: Zip the binary
+        run: |
+          cp over_under_field.png dist
+          mv dist over_under_sim
+          zip over_under_sim_${{ matrix.os }}.zip over_under_sim/
+        working-directory: ${{ github.workspace }}
+
+      - name: Upload to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: over_under_sim_${{ matrix.os }}
+          path: over_under_sim_${{ matrix.os }}.zip
