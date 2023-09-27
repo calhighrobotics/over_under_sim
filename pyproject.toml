@@ -1,0 +1,17 @@
+[project]
+name = "gamepad_ctrl"
+version = "0.1.0"
+description = "A vex Over-Under bird's eye view simulator with markings of important events"
+authors = [
+    {name = "Absozero", email = "aswsub123@gmail.com"},
+]
+dependencies = [
+    "pygame>=2.0.3",
+]
+requires-python = ">=3.5"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
