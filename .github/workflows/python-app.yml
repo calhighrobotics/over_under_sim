@@ -26,11 +26,11 @@ jobs:
         run: pip install . && pip install pyinstaller
 
       - name: Build with PyInstaller
-        run: pyinstaller --onefile --noconsole main.py
+        run: cd sim && pyinstaller --onefile --noconsole sim.py
 
       - name: Zip the binary
         run: |
-          cp over_under_field.png dist
+          cp assets ../dist
           mv dist over_under_sim
         working-directory: ${{ github.workspace }}
 
