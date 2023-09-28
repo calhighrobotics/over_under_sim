@@ -39,10 +39,10 @@ circle_locs = []
 # Function to handle gamepad input and control the Turtle
 if pygame.joystick.get_count() == 0:
     print("No gamepad detected.")
-    pygame.quit()
-
-joystick = pygame.joystick.Joystick(0)
-joystick.init()
+    pass
+else:
+    joystick = pygame.joystick.Joystick(0)
+    joystick.init()
 
 def sim_loop(obj_x, obj_y):
     '''
