@@ -19,14 +19,18 @@ the object on the screen.
 
 # To-Do
 
-- [ ] Change name of the program
-- [ ] Remove the error after closing the window
-- [ ] Smooth the input from the controller to straight lines
-- [ ] Allow keyboard input
+- [x] Change name of the program
+- [x] Remove the error after closing the window
+- [x] Smooth the input from the controller to straight lines
+- [x] Allow keyboard/mouse input
+	- [ ] Make the keyboard input smoother and check when the key is held down
 - [x] Full Linux/Mac/Windows support
-- [ ] Erasing old movements without restarting program
-- [ ] Marking important actions on the field
-- [ ] Add icons to the field
-	- [ ] Replace the circle icon of the main robot to an actual robot
-	- [ ] Draw colored circles for important actions on the field
-	- [ ] draw triballs being lifted with a button press
+- [x] Erasing old movements without restarting program
+- [x] Marking important actions on the field
+- [x] Add icons to the field
+	- [x] Replace the circle icon of the main robot to an actual robot
+	- [x] Draw colored circles for important actions on the field
+	- [ ] Draw triball movement
+- [ ] Allow user to choose program preferences - Line color, keybindings, keyboard distance/velocity
+- [ ] Create help menu (at least for keyboard bindings) 
+- [ ] Smooth robot movement with gamepad
