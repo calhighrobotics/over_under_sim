@@ -26,7 +26,7 @@ jobs:
         run: pip install . && pip install pyinstaller
 
       - name: Build with PyInstaller
-        run: cd sim && pyinstaller --onefile --noconsole sim.py
+        run: cd sim && pyinstaller --onefile --noconsole sim/sim.py
 
       - name: Zip the binary
         run: |
