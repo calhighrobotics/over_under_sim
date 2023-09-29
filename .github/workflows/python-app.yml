@@ -30,6 +30,7 @@ jobs:
 
       - name: Zip the binary
         run: |
+          mkdir -p dist/assets
           cp -r sim/assets dist/assets
           mv dist over_under_sim
         working-directory: ${{ github.workspace }}
